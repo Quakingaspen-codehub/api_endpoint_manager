@@ -4,12 +4,12 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="api_endpoint",
+    name="api_endpoint_manager",
     version="0.0.1",
     author="Quaking Aspen",
     author_email="info@quakingaspen.net",
     license='MIT',
-    description="This library contains classes to ease the process of Flask API end points definition",
+    description="This library contains classes to simplify the process of Flask API end points definition",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Quakingaspen-codehub/api_endpoint",
