@@ -12,7 +12,7 @@ setuptools.setup(
     description="This library contains classes to simplify the process of Flask API end points definition",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/Quakingaspen-codehub/api_endpoint",
+    url="https://github.com/Quakingaspen-codehub/api_endpoint_manager",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
