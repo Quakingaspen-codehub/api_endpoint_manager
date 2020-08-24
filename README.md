@@ -8,7 +8,7 @@
 [Contributors](#Contributors)\
 [License](#License)
 <h2 id="Introduction">Introduction</h2>
-This module contains a simple library to deal with api
+This library contains classes to ease the process of Flask API end points definition
  
 <h2 id="Started">Getting Started</h2>
 In order to install, open the command prompt and type:
