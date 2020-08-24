@@ -22,7 +22,7 @@ pip install api_endpoint_manager
 <h2 id="">Contributors</h2>
 
 This project exists thanks to all the people who contribute. [[Contribute](CONTRIBUTING.md)].
-<a href="https://github.com/Quakingaspen-codehub/api_endpoint/graphs/contributors">
+<a href="https://github.com/Quakingaspen-codehub/api_endpoint_manager/graphs/contributors">
 ""
 </a>
 
