@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="api_endpoint_manager",
-    version="0.0.2",
+    version="0.0.3",
     author="Quaking Aspen",
     author_email="info@quakingaspen.net",
     license='MIT',
@@ -21,5 +21,5 @@ setuptools.setup(
     ],
     platform=['Any'],
     python_requires='>=3.6',
-    install_requires=['http_request_response', 'http_request_args','flask_jwt_auth','flask_restplus']
+    install_requires=['http_request_response==0.0.7', 'http_request_args','flask_jwt_auth','flask_restplus']
 )
