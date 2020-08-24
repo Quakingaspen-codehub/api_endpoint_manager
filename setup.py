@@ -9,7 +9,7 @@ setuptools.setup(
     author="Quaking Aspen",
     author_email="info@quakingaspen.net",
     license='MIT',
-    description="This module contains a simple library to deal with api endpoint",
+    description="This library contains classes to ease the process of Flask API end points definition",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Quakingaspen-codehub/api_endpoint",
