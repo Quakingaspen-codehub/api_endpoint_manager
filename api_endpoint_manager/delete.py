@@ -7,14 +7,16 @@ from .api_endpoint import APIEndpoint
 
 
 class DeleteEndpoint(APIEndpoint):
-    def __init__(self, api, route, qs_args_def, body_args_def, business_class, authentication_required=True, authorization_object=None):
+    def __init__(self, api, route, qs_args_def, body_args_def, business_class, authentication_required=True,
+                 authorization_object=None, req_token='access'):
         if '_id' in route:
             @api.route(route)
             class ItemDelete(Resource):
 
                 @RequestUtilities.try_except
                 @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
-                @APIAuth.auth_required(authentication_required=authentication_required, authorization_object=authorization_object)
+                @APIAuth.auth_required(authentication_required=authentication_required,
+                                       authorization_object=authorization_object, req_token=req_token)
                 def delete(self, _id):
                     return business_class.run()
         else:
@@ -23,6 +25,7 @@ class DeleteEndpoint(APIEndpoint):
 
                 @RequestUtilities.try_except
                 @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
-                @APIAuth.auth_required(authentication_required=authentication_required, authorization_object=authorization_object)
+                @APIAuth.auth_required(authentication_required=authentication_required,
+                                       authorization_object=authorization_object, req_token=req_token)
                 def delete(self):
                     return business_class.run()

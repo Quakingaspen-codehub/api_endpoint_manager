@@ -7,12 +7,14 @@ from .api_endpoint import APIEndpoint
 
 
 class PostEndpoint(APIEndpoint):
-    def __init__(self, api, route, qs_args_def, body_args_def, business_class, authentication_required=True, authorization_object=None):
+    def __init__(self, api, route, qs_args_def, body_args_def, business_class, authentication_required=True,
+                 authorization_object=None, req_token='access'):
         @api.route(route)
         class ItemPost(Resource):
 
             @RequestUtilities.try_except
             @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
-            @APIAuth.auth_required(authentication_required=authentication_required, authorization_object=authorization_object)
+            @APIAuth.auth_required(authentication_required=authentication_required,
+                                   authorization_object=authorization_object, req_token=req_token)
             def post(self):
                 return business_class.run()
