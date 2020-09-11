@@ -14,9 +14,9 @@ class PutEndpoint(APIEndpoint):
             class ItemPut(Resource):
 
                 @RequestUtilities.try_except
-                @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
                 @APIAuth.auth_required(authentication_required=authentication_required,
                                        authorization_object=authorization_object, req_token=req_token)
+                @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
                 def put(self, _id):
                     return business_class.run()
         else:
@@ -24,8 +24,8 @@ class PutEndpoint(APIEndpoint):
             class ItemPut(Resource):
 
                 @RequestUtilities.try_except
-                @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
                 @APIAuth.auth_required(authentication_required=authentication_required,
                                        authorization_object=authorization_object, req_token=req_token)
+                @RequestArgsValidator.args_validation(qs_args_def, body_args_def)
                 def put(self):
                     return business_class.run()
